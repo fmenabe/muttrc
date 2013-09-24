@@ -1,0 +1,14 @@
+UNISTRA_MAIL=
+UNISTRA_USER=
+UNISTRA_PWD=
+
+GMAIL_MAIL=
+GMAIL_USER=
+GMAIL_PWD=
+
+all: install
+
+install:
+    cp muttrc ~/.muttrc
+    sed -e 's|%UNISTRA_MAIL%|$(UNISTRA_MAIL)|' -e 's|%UNISTRA_USER%|$(UNISTRA_USER)|' -e 's|%UNISTRA_PWD%|$(UNISTRA_PWD)|' unistra.muttrc > ~/.unistra.muttrc
+    sed -e 's|%GMAIL_MAIL%|$(GMAIL_MAIL)|' -e 's|%GMAIL_USER%|$(GMAIL_USER)|' -e 's|%GMAIL_PWD%|$(GMAIL_PWD)|' gmail.muttrc > ~/.gmail.muttrc

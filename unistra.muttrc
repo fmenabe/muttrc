@@ -1,0 +1,34 @@
+source ~/.muttrc
+
+## General configuration.
+set my_server       = "mailserver.u-strasbg.fr"
+set my_user         = "%UNISTRA_USER%"
+set my_pass         = "%UNISTRA_PWD%"
+
+## IMAP configuration.
+set from            = "$my_user@unistra.fr"
+set folder          = "imaps://$my_user@$my_server"
+set imap_user       = $my_user
+set imap_pass       = $my_pass
+set spoolfile       = +INBOX
+set postponed       = "=INBOX.Drafts"
+set mbox            = "=INBOX.Archives"
+set record          = "=INBOX.Sent"
+
+# Check all folders.
+set imap_check_subscribed
+
+# Store message headers locally to speed things up.
+set header_cache = ~/.cache/mutt
+
+# Allow mutt to open new imap connection automatically.
+unset imap_passive
+
+# How often to check for new mail
+set mail_check = 60
+set timeout = 15
+
+## SMTP configuration.
+set my_name         = "François Ménabé"
+set smtp_url        = "smtps://$my_user:$my_pass@$my_server"
+set ssl_force_tls   = yes

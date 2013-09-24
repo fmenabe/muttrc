@@ -1,0 +1,37 @@
+source ~/.muttrc
+
+## General configuration.
+set my_user     = "%GMAIL_USER%"
+set my_pass     = "%GMAIL_PWD%"
+
+## IMAP configuration.
+set from        = "$my_user@gmail.com"
+set folder      = "imaps://$my_user@imap.gmail.com"
+set imap_user   = $my_user
+set imap_pass   = $my_pass
+set spoolfile   = +INBOX
+set mbox        = "Archives"
+set record      = "Sent"
+set postponed   = "Drafts"
+set my_span     = "Junk"
+
+# Check all folders.
+set imap_check_subscribed
+
+# Store message headers locally to speed things up.
+set header_cache = ~/.cache/mutt
+
+# Store message locally to speed things up. (TODO: choose folders)
+set message_cachedir = "~/.cache/mutt"
+
+# Allow mutt to open new imap connection automatically.
+unset imap_passive
+
+# How often to check for new mail
+set mail_check = 60
+set timeout = 15
+
+## SMTP configuration
+set my_name         = "François Ménabé"
+set smtp_url        = "smtps://$my_user:$my_pass@smtp.gmail.com"
+set ssl_force_tls   = yes

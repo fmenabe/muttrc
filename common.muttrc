@@ -24,3 +24,9 @@ bind pager <Down> next-line
 bind index x noop # Needed as there is warning in neomutt because of the next to macros.
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
+
+
+## Editor and signature.
+set editor="vim -u ~/.mutt/vimrc"
+set signature="~/.mutt/.signature"
+set sig_dashes=yes

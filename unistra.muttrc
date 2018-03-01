@@ -1,4 +1,4 @@
-source ~/.muttrc
+source ~/.mutt/common.muttrc
 
 ## General configuration.
 set my_server       = "mailserver.u-strasbg.fr"

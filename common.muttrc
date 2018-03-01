@@ -3,6 +3,12 @@
 source ~/.mutt/mutt-colors-solarized-light-256.muttrc
 
 
+## Folder screen.
+set mail_check_stats=yes
+set mail_check_stats_interval=10
+set folder_format="%2C %t %n %F %2l %-8.8u %-8.8g %8s %d %f"
+
+
 ## Sorting.
 # Sort mails by thread and reverse date by default.
 set sort=threads
@@ -26,7 +32,7 @@ macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
 
-## Forwaring
+## Forwarding
 # Set forwarded message as attachement.
 set mime_forward=yes
 set mime_forward_rest=yes

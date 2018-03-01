@@ -15,6 +15,7 @@ bind pager <Up> previous-line
 bind pager <Down> next-line
 
 # Sorting shortcuts.
+bind index x noop
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
@@ -34,14 +35,3 @@ color    tilde         green           default
 color    bold          brightyellow    default
 color    markers       red             default
 
-### Multi malibox configuration
-## Personal account.
-#source ~/.mutt/gmail.muttrc
-#folder-hook $folder 'source ~/.mutt/gmail.muttrc'
-#
-## Work account.
-#source ~/.mutt/unistra.muttrc
-#folder-hook $folder 'source ~/.mutt/unistra.muttrc'
-#
-#macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/gmail.muttrc<enter><change-folder>!<enter>'
-#macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'

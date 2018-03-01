@@ -1,8 +1,13 @@
+## Source files.
+# Common configuration between mailboxes
 source ~/.mutt/common.muttrc
+# Decrypt mailbox password using GPG key (this set 'my_pass' variable).
+source "gpg -d ~/.mutt/gmail.gpg |"
 
-## General configuration.
-set my_user     = "%GMAIL_USER%"
-set my_pass     = "%GMAIL_PWD%"
+
+## Reusable variables.
+set my_user     = "francois.menabe"
+
 
 ## IMAP configuration.
 set from        = "$my_user@gmail.com"
@@ -17,19 +22,16 @@ set my_span     = "Junk"
 
 # Check all folders.
 set imap_check_subscribed
-
 # Store message headers locally to speed things up.
-set header_cache = ~/.cache/mutt
-
+set header_cache = ~/.cache/mutt/gmail_headers
 # Store message locally to speed things up. (TODO: choose folders)
-set message_cachedir = "~/.cache/mutt"
-
+set message_cachedir = ~/.cache/mutt/gmail_message
 # Allow mutt to open new imap connection automatically.
 unset imap_passive
-
 # How often to check for new mail
 set mail_check = 60
 set timeout = 15
+
 
 ## SMTP configuration
 set my_name         = "François Ménabé"

@@ -1,9 +1,14 @@
+## Source files.
+# Common configuration between mailboxes
 source ~/.mutt/common.muttrc
+# Decrypt mailbox password using GPG key (this set 'my_pass' variable).
+source "gpg -d ~/.mutt/unistra.gpg |"
 
-## General configuration.
+
+## Reusable variables.
 set my_server       = "mailserver.u-strasbg.fr"
-set my_user         = "%UNISTRA_USER%"
-set my_pass         = "%UNISTRA_PWD%"
+set my_user         = "francois.menabe"
+
 
 ## IMAP configuration.
 set from            = "$my_user@unistra.fr"
@@ -17,16 +22,14 @@ set record          = "=INBOX.Sent"
 
 # Check all folders.
 set imap_check_subscribed
-
 # Store message headers locally to speed things up.
-set header_cache = ~/.cache/mutt
-
+set header_cache = ~/.cache/mutt/unistra
 # Allow mutt to open new imap connection automatically.
 unset imap_passive
-
 # How often to check for new mail
 set mail_check = 60
 set timeout = 15
+
 
 ## SMTP configuration.
 set my_name         = "François Ménabé"

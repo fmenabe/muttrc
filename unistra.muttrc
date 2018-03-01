@@ -35,3 +35,7 @@ set timeout = 15
 set my_name         = "François Ménabé"
 set smtp_url        = "smtps://$my_user:$my_pass@$my_server"
 set ssl_force_tls   = yes
+
+
+## LDAP address book.
+set query_command="~/.mutt/mutt_ldap.py '%s'"

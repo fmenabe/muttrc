@@ -1,3 +1,7 @@
+## Solarized colors (https://github.com/altercation/mutt-colors-solarized).
+source ~/.mutt/mutt-colors-solarized-light-256.muttrc
+
+
 ## Sort
 # Sort mails by thread and reverse date by default.
 set sort=threads
@@ -19,19 +23,4 @@ bind index x noop
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
-# Colors for white background.
-color    hdrdefault    black           default
-color    quoted        red             default
-color    signature     brightblack     default
-color    indicator     brightwhite     red
-color    attachment    black           default
-color    error         red             default
-color    message       black            default
-color    search        brightwhite     magenta
-color    status        black           white
-color    tree          red             default
-color    normal        black           default
-color    tilde         green           default
-color    bold          brightyellow    default
-color    markers       red             default
 

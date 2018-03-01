@@ -1,8 +1,9 @@
-## Solarized colors (https://github.com/altercation/mutt-colors-solarized).
+## Colors.
+# Solarized colors (https://github.com/altercation/mutt-colors-solarized).
 source ~/.mutt/mutt-colors-solarized-light-256.muttrc
 
 
-## Sort
+## Sorting.
 # Sort mails by thread and reverse date by default.
 set sort=threads
 set sort_aux=reverse-last-date-received
@@ -10,17 +11,16 @@ set sort_aux=reverse-last-date-received
 # Sort folders browser alphabetically.
 set sort_browser=alpha
 
+
 ## Bindings
 # Refresh mails
 bind index "+" imap-fetch-mail
 
-# Allow arrows in pager.
+# Allow arrows in pager .
 bind pager <Up> previous-line
 bind pager <Down> next-line
 
 # Sorting shortcuts.
-bind index x noop
+bind index x noop # Needed as there is warning in neomutt because of the next to macros.
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
-
-

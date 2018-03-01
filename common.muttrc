@@ -26,6 +26,12 @@ macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
 
+## Forwaring
+# Set forwarded message as attachement.
+set mime_forward=yes
+set mime_forward_rest=yes
+
+
 ## Editor and signature.
 set editor="vim -u ~/.mutt/vimrc"
 set signature="~/.mutt/.signature"

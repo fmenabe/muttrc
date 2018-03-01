@@ -1,1 +1,5 @@
+# Vim temporary files.
+*.swp
+
+# Makefile containing sensible data.
 Makefile
